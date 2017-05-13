@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>space.mrx.basic.manager</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>space.mrx</groupId>
+  		<artifactId>space.mrx.basic.dao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

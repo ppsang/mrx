@@ -1,0 +1,12 @@
+package space.mrx.basic.web.screen;
+
+import org.springframework.stereotype.Controller;
+
+@Controller()
+public class Welcome {
+
+	
+	public void wlecome(){
+		
+	}
+}

@@ -1,0 +1,19 @@
+package space.mrx.basic.web.screen;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.alibaba.dubbo.config.support.Parameter;
+
+@Controller()
+public class Welcome {
+
+	@RequestMapping("/welcome/{param}")
+	public void wlecome(HttpServletRequest request, HttpServletResponse response, @PathVariable String param){
+		
+	}
+}

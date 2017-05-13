@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>space.mrx</groupId>
+  <artifactId>space.mrx.basic</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>space.mrx.basic.service</module>
+  	<module>space.mrx.basic.manager</module>
+  	<module>space.mrx.basic.dao</module>
+  	<module>space.mrx.basic.web</module>
+  	<module>space.mrx.basic.api</module>
+  	<module>space.mrx.basic.common</module>
+  </modules>
+  
+  <dependencyManagement>
+  	<dependencies>
+  	
+  	</dependencies>
+  </dependencyManagement>
+</project>
