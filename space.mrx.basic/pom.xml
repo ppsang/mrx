@@ -10,5 +10,6 @@
   	<module>space.mrx.basic.dao</module>
   	<module>space.mrx.basic.web</module>
   	<module>space.mrx.basic.api</module>
+  	<module>space.mrx.basic.common</module>
   </modules>
 </project>
