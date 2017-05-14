@@ -26,11 +26,28 @@
 	<mvc:annotation-driven />
 	
 	<!-- 视图解析器 -->
-	<bean
+	<!-- <bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
-	</bean>	
+	</bean> -->
+	
+	<!-- resourceLoaderPath vm文件存放的路径 -->
+	<!-- configLocation 配置文件路径 -->
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">  
+		    <property name="resourceLoaderPath" value="/common/" />
+		    <property name="configLocation" value="classpath:common/velocity.properties" />
+	</bean>  
+	
+	<!-- velocity 的视图解析器 -->
+	<!-- <property name="prefix" value="/WEB-INF/screen/" />
+		    <property name="suffix" value=".vm" /> -->
+	<bean id="velocityViewResolver"  
+		    class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+	    <property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".html"></property>
+	</bean>
 	
 	<!-- 引用服务 -->
 	<!-- <dubbo:application name="e3mall-search-web" /> -->
