@@ -36,18 +36,36 @@
 	<!-- configLocation 配置文件路径 -->
 	<bean id="velocityConfig"
 		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">  
-		    <property name="resourceLoaderPath" value="/common/" />
+		    <property name="resourceLoaderPath" value="/WEB-INF/screen/" />
 		    <property name="configLocation" value="classpath:common/velocity.properties" />
 	</bean>  
 	
 	<!-- velocity 的视图解析器 -->
 	<!-- <property name="prefix" value="/WEB-INF/screen/" />
 		    <property name="suffix" value=".vm" /> -->
-	<bean id="velocityViewResolver"  
+	<!-- <bean id="velocityViewResolver"  
 		    class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
 	    <property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".html"></property>
+	</bean> -->
+	
+	<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+	    <property name="order" value="0"/>
+	    <property name="contentType" value="text/html;charset=UTF-8"/>
+	    <property name="cache" value="true"/>
+	    <property name="suffix" value=".vm"/>
+	    <property name="layoutUrl" value="layout/layout.vm"/>
+	    <property name="exposeSpringMacroHelpers" value="true" /> <!-- 是否使用spring对宏定义的支持 -->
+	    <property name="exposeSessionAttributes" value="true" /> <!-- 是否开放request属性 -->
+	    <property name="requestContextAttribute" value="request"/> <!-- request属性引用名称 -->
+	    <property name="dateToolAttribute" value="dateTool"/>
+	    <property name="numberToolAttribute" value="numberTool"/>
 	</bean>
+	
+	<!-- <bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">  
+	    <property name="suffix" value=".vm" />
+	    <property name="contentType"><value>text/html;charset=UTF-8</value></property>
+	</bean> -->
 	
 	<!-- 引用服务 -->
 	<!-- <dubbo:application name="e3mall-search-web" /> -->
