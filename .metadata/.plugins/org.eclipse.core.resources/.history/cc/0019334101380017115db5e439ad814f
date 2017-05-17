@@ -1,9 +1,0 @@
-package space.mrx.basic.web.screen;
-
-public class Welcome {
-
-	
-	public void wlecome(){
-		
-	}
-}

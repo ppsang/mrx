@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>欢迎登录</title>
+    <!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://static.bootcss.com/www/assets/css/site.min.css?v5" rel="stylesheet"> -->
+    <link href="../../static/css/combined.css" rel="stylesheet">
+    <link href="../../static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/buttons.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">资料</a>
+                    </li>
+                    <li class="">
+                        <a href="#">信息</a>
+                    </li>
+            <li class="">
+              <!-- <a id="modal-661042" href="#modal-container-661042" role="button" class="btn" data-toggle="modal">触发遮罩窗体</a> -->
+              <a href="#modal-container-661042" data-toggle="modal">登录</a>
+            </li>
+            <li class="dropdown pull-right">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">下拉</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">操作</a>
+                            </li>
+                            <li>
+                                <a href="#">设置栏目</a>
+                            </li>
+                            <li>
+                                <a href="#">更多设置</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">分割线</a>
+                            </li>
+                        </ul>
+                    </li>
+            <li style="
+              padding-top: 2px;
+              float: right;
+            ">
+              <form class="form-search" method="post" action="http://localhost:8085/welcome/adfa.do" onsubmit="javascript:mySearch();" >
+                <label for="searchContent">小姐姐 我想:</label>
+                <input id="searchContent" name="searchContent" class="input-medium search-query" type="text" placeholder="你要搜什么呀？骚年.."/>
+                <input type="submit" value="Go" class="button button-pill">
+                    </form>
+            </li>
+                </ul>
+                <div id="modal-container-661042" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">
+                            登录
+                        </h3>
+                    </div>
+                    <div class="modal-body">
+              <form class="form-horizontal" id="userModel">
+                <div class="alert" style="margin-left: 130px;margin-right: 130px;">
+                           <button type="button" class="close" data-dismiss="alert">×</button>
+                          <h4>
+                              提示!
+                          </h4> <strong>警告!</strong> 请注意你的个人隐私安全.
+                      </div>
+                        <div class="control-group">
+                             <label class="control-label" for="inputEmail">邮箱</label>
+                            <div class="controls">
+                                <input id="inputEmail" type="text" name="email" required oninput="myValidate(this)"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                             <label class="control-label" for="inputPassword">密码</label>
+                            <div class="controls">
+                                <input id="inputPassword" type="password" name="password" required/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                 <label class="checkbox"><input type="checkbox" name="remember" checked/>记住密码</label>
+                     <!-- <button type="submit" class="btn">登陆</button> -->
+                     <a href="javascript:void(0)" role="button" onclick="login()" class="btn" data-toggle="modal">登录</a>
+                     <button class="btn" data-dismiss="modal" aria-hidden="true" style="margin-left: 107px;">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <div class="accordion" id="accordion-868356">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-868356" href="#accordion-element-413241">选项卡 #1</a>
+                        </div>
+                        <div id="accordion-element-413241" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                功能块...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-868356" href="#accordion-element-91460">选项卡 #2</a>
+                        </div>
+                        <div id="accordion-element-91460" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                功能块...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel slide" id="carousel-305427">
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#carousel-305427">
+                        </li>
+                        <li data-slide-to="1" data-target="#carousel-305427">
+                        </li>
+                        <li data-slide-to="2" data-target="#carousel-305427">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="" src="http://www.bootcss.com/p/layoutit/img/1.jpg" />
+                            <div class="carousel-caption">
+                                <h4>
+                                    棒球
+                                </h4>
+                                <p>
+                                    棒球运动是一种以棒打球为主要特点，集体性、对抗性很强的球类运动项目，在美国、日本尤为盛行。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="http://www.bootcss.com/p/layoutit/img/2.jpg" />
+                            <div class="carousel-caption">
+                                <h4>
+                                    冲浪
+                                </h4>
+                                <p>
+                                    冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="http://www.bootcss.com/p/layoutit/img/3.jpg" />
+                            <div class="carousel-caption">
+                                <h4>
+                                    自行车
+                                </h4>
+                                <p>
+                                    以自行车为工具比赛骑行速度的体育运动。1896年第一届奥林匹克运动会上被列为正式比赛项目。环法赛为最著名的世界自行车锦标赛。
+                                </p>
+                            </div>
+                        </div>
+                    </div> <a data-slide="prev" href="#carousel-305427" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-305427" class="right carousel-control">›</a>
+                </div>
+                <div class="page-header">
+                    <h1>
+                        页标题范例 <small>此处编写页标题</small>
+                    </h1>
+                </div>
+                <!-- <form class="form-horizontal">
+                    <div class="control-group">
+                         <label class="control-label" for="inputEmail">邮箱</label>
+                        <div class="controls">
+                            <input id="inputEmail" type="text" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                         <label class="control-label" for="inputPassword">密码</label>
+                        <div class="controls">
+                            <input id="inputPassword" type="password" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                             <label class="checkbox"><input type="checkbox" /> Remember me</label> <button type="submit" class="btn">登陆</button>
+                        </div>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      // var search  = function(){
+      //   alert("adfad");
+      // };
+      function mySearch(){
+        var content = encodeURI($('input[name="searchContent"]').val());
+
+        $(".form-search")[0].action = "http://localhost:8085/welcome/" + encodeURI(content) + ".html";
+      }
+      function myValidate(data){
+        console.log(data.value);
+      }
+      function login(){
+        //jQuery.post("/user/login.do",{"username":"lisi","password":"123"},function(data){
+        //    console.log(data);
+        //},"json")
+        
+        jQuery.ajax({
+          type: 'POST',
+          url: '/user/login.do',
+          data: {"username":"lisi","password":"123"},
+          success: function(data){
+              console.log(data);
+          },
+          dataType: 'json'
+        });
+      }
+    </script>
+
+
+
+  </body>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/unveil/1.3.0/jquery.unveil.min.js"></script>
+  <script src="https://cdn.bootcss.com/scrollup/2.4.1/jquery.scrollUp.min.js"></script>
+  <script src="https://cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+  <script src="https://static.bootcss.com/www/assets/js/site.min.js"></script>
+  <style media="screen">
+    .button {
+        color: #fbc378;
+        background-color: #EEE;
+        font-size: 14px;
+        line-height: 30px;
+        height: 30px;
+        padding: 0px 25px; /*控制按钮的宽度*/
+    }
+  </style>
+
+
+</html>
