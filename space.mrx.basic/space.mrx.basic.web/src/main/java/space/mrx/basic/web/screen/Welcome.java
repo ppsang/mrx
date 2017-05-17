@@ -27,7 +27,7 @@ public class Welcome {
 		System.out.println("传递进来的参数是：" + param);
 		
 		// 这儿返回的东西，会自动加上前缀和后缀进行匹配 会自动进行跳转
-		return "index";
+		return "login";
 	}
 	
 	@RequestMapping("/welcome/hello")
