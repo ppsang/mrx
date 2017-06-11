@@ -5,7 +5,7 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="mrx" version="2.5">
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>/index.py</welcome-file>
 	</welcome-file-list>
 	<!-- spring编码过滤器：接受post请求乱码 -->
 	<filter>
@@ -32,7 +32,16 @@
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<!-- 页面伪静态化 -->
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.py</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>  
+	    <servlet-name>Kaptcha</servlet-name>  
+	    <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>   
+	</servlet>  
+	<servlet-mapping>  
+	    <servlet-name>Kaptcha</servlet-name>  
+	    <url-pattern>/kaptcha.jpg</url-pattern>  
+	</servlet-mapping>  
 	
 </web-app>

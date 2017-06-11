@@ -105,6 +105,13 @@
 		<artifactId>space.mrx.basic.service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	
+	<!-- 验证码 -->
+	<!-- <dependency>
+        <groupId>com.github.penggle</groupId>
+        <artifactId>kaptcha</artifactId>
+        <version>2.3.2</version>
+    </dependency> -->
   </dependencies>
   
   <build>
@@ -120,7 +127,11 @@
 					<path>/</path>
 					<uriEncoding>utf-8</uriEncoding>
 					<!-- 项目发布端口 -->
-					<port>8085</port>
+					<port>8080</port>
+					<url>http://www.woodchan.com/manager/text</url>
+					<server>tomcat7</server>
+					<username>joker</username>
+					<password>joker</password>
 				</configuration>
 			</plugin>
 		</plugins>

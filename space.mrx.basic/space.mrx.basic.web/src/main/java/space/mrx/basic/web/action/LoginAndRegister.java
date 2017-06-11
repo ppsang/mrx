@@ -28,10 +28,10 @@ public class LoginAndRegister {
 	
 	// 怎么防止重复提交
 	@RequestMapping("/user/login")
-	public @ResponseBody String doLogin(@RequestParam String username, @RequestParam String password,HttpServletRequest request, HttpServletResponse response, Model model) throws IOException{
+	public @ResponseBody String doLogin(HttpServletRequest request) throws IOException{
 		String username1 = request.getParameter("username");
 		System.out.println(username1);
-		//String password = request.getParameter("password");
+		String password = request.getParameter("password");
 		// 设置查询条件
 		UserDO userDO = new UserDO();
 		userDO.setUsername(username1);
@@ -39,7 +39,6 @@ public class LoginAndRegister {
 		// 调用service
 		ResultVO result = userService.Login(userDO);
 		// 为什么要转换两遍？？
-		model.addAttribute("test", "123");
 		return JSON.json(result);
 	}
 }
