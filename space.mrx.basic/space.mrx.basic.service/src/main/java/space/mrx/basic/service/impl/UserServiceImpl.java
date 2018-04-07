@@ -1,7 +1,6 @@
 package space.mrx.basic.service.impl;
 
-import java.util.logging.Logger;
-
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,7 @@ public class UserServiceImpl implements IUserService {
 	private IUserManager userManager;
 	
 	// @FIXME 需要引入logger4J
-	Logger logger = Logger.getLogger(UserServiceImpl.class.toString());
+	private static final Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
 
 	public ResultVO Login(UserDO userDO) {
 		
